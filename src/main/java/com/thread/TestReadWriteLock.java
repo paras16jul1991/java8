@@ -49,10 +49,11 @@ public class TestReadWriteLock {
 		ExecutorService pool = Executors.newFixedThreadPool(4);
 		Runnable task = () -> r.get();
 		Runnable task2 = () -> r.put();
+
+		pool.execute(task);
+		pool.execute(task);
+		pool.execute(task);
 		pool.execute(task2);
-		pool.execute(task);
-		pool.execute(task);
-		pool.execute(task);
 
 		pool.shutdown();
 

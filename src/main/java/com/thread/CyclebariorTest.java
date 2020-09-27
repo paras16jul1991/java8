@@ -35,10 +35,11 @@ public class CyclebariorTest {
 		new Thread(new ChildThread(barrier)).start();
 		new Thread(new ChildThread(barrier)).start();
 		new Thread(new ChildThread(barrier)).start();
+		//Thread.sleep(2000);
 		System.out.println("Here");
 		barrier.await();
 		System.out.println(barrier.getParties());
-		Thread.sleep(2000);
+
 		barrier.reset();
 		new Thread(new ChildThread(barrier)).start();
 		new Thread(new ChildThread(barrier)).start();

@@ -22,7 +22,7 @@ public class TestCompletableFuture {
 	public static void main(String[] args) throws Exception {
 		TestCompletableFuture test = new TestCompletableFuture();
 		Future<String> calculateAsync = test.calculateAsync();
-	//	System.out.println(calculateAsync.get());
+		System.out.println(calculateAsync.get());
 	}
 
 }

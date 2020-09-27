@@ -11,9 +11,9 @@ class MyResourceR {
 
 	void test() {
 		try {
-			boolean tryLock = lock.tryLock(30000, TimeUnit.MILLISECONDS);
+			boolean tryLock = lock.tryLock(5000, TimeUnit.MILLISECONDS);
 			if (tryLock) {
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < 2; i++) {
 					System.out.println("Test " + i + " " + Thread.currentThread());
 					Thread.sleep(1000);
 				}
@@ -21,9 +21,10 @@ class MyResourceR {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
-			lock.unlock();
-		}
 
+			 lock.unlock();
+		}
+		System.out.println("Executing end" + Thread.currentThread());
 	}
 }
 

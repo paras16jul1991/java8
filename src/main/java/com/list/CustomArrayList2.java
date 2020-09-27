@@ -2,19 +2,19 @@ package com.list;
 
 import java.util.Arrays;
 
-public class CustomLinkedList {
+public class CustomArrayList2 {
 	int a[];
 	static int size = 0;
 	static int currentIndex = 0;
 	int initialCapacity = 10;
 	float loadFactory = 0.75F;
 
-	CustomLinkedList() {
+	CustomArrayList2() {
 		a = new int[initialCapacity];
 		size = initialCapacity;
 	}
 
-	CustomLinkedList(Integer length) {
+	CustomArrayList2(Integer length) {
 		a = new int[length];
 		size = length;
 	}
@@ -49,7 +49,7 @@ public class CustomLinkedList {
 	}
 
 	public static void main(String[] args) {
-		CustomLinkedList customLinkedList = new CustomLinkedList();
+		CustomArrayList2 customLinkedList = new CustomArrayList2();
 		for (int i = 1; i <= 12; i++) {
 			customLinkedList.add(i);
 		}

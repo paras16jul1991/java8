@@ -42,7 +42,7 @@ public class YeildTest {
 		t2.start();
 		t1.start();
 		t1.join();
-		// Thread.yield();
+		Thread.yield();
 		// t2.join();
 
 		// t2.join();
