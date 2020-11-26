@@ -15,13 +15,12 @@ class MyResourceR {
 			if (tryLock) {
 				for (int i = 0; i < 2; i++) {
 					System.out.println("Test " + i + " " + Thread.currentThread());
-					Thread.sleep(1000);
+					Thread.sleep(10000);
 				}
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
-
 			 lock.unlock();
 		}
 		System.out.println("Executing end" + Thread.currentThread());
