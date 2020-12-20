@@ -4,12 +4,21 @@ class Aaaa {
 	{
 		System.out.println("Aaaas");
 	}
+	public Aaaa() {
+		System.out.println("Constructor Aaaas");
+	}
+
 }
 
 class Bbbbb extends Aaaa {
 	{
 		System.out.println("Bbbbb");
 	}
+	public Bbbbb() {
+		System.out.println(" Constructor Bbbbb");
+	}
+	
+
 }
 
 public class InstanceBlockTest extends Bbbbb {
@@ -26,6 +35,6 @@ public class InstanceBlockTest extends Bbbbb {
 	}
 
 	public static void main(String[] args) {
-		InstanceBlockTest test = new InstanceBlockTest();
+		InstanceBlockTest test = new InstanceBlockTest("test");
 	}
 }
