@@ -36,6 +36,8 @@ public class FindFirstRepeatedCharacter {
 
 		Stream.of(var.split(",")).forEach(x -> map2.compute(x, (k, v) -> (v == null) ? 1 : ++v));
 		map2.keySet().stream().filter(key -> map2.get(key) == 1).findFirst().ifPresent(System.out::println);
+
+		Stream.of(var.split(",")).sorted().collect(Collectors.toMap(String::valueOf,String::valueOf));
 	}
 
 }

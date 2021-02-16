@@ -28,6 +28,10 @@ interface A1SubInterface extends AInterface {
 }
 
 public class DefaultMethodTest implements A1SubInterface, ASubInterface {
+	@Override
+	public void call() {
+		System.out.println("Child ovveride call");
+	}
 
 	public static void main(String[] args) {
 		DefaultMethodTest test = new DefaultMethodTest();

@@ -55,6 +55,8 @@ public class TestReadWriteLock {
 		pool.execute(task);
 		pool.execute(task2);
 
+		pool.execute(task2);
+
 		pool.shutdown();
 
 	}

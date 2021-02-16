@@ -8,11 +8,11 @@ class PrintEvenOdd {
 
 	synchronized void print() {
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 5; i++) {
 			try {
 				System.out.println(Thread.currentThread().getName() + "  " + intt.getAndIncrement());
 				notifyAll();
-				if (i != 9)
+				if (i <= 5 )
 					wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();

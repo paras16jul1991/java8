@@ -9,7 +9,7 @@ public class TestFutureTask {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		ExecutorService pool = Executors.newFixedThreadPool(2);
-		Future<Integer> submit3 = pool.submit(() -> 1);
+		Future<Integer> submit3 = pool.submit(() -> { Thread.sleep(5000); return 1 ;});
 		Future<Integer> submit2 = pool.submit(() -> 1);
 		Future<Integer> submit = pool.submit(() -> 1);
 		System.out.println(submit.get() + submit2.get() + submit3.get());

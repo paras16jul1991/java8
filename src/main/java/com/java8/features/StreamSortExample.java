@@ -110,6 +110,11 @@ public class StreamSortExample {
 
 		list.stream().map(x -> x.getName()).reduce((x1, x2) -> x1.length() > x2.length() ? x1 : x2)
 				.ifPresent(System.out::println);
+
+		list.stream().reduce((x, y) -> x.getId() < y.getId() ? x : y).ifPresent(x -> System.out.println(x.getId()));
+
+		list.stream().map(x -> x.getId()).reduce((x, y) -> x + y).ifPresent(System.out::println);
+
 		Integer reduce = Stream.of(1, 2, 3, 4, 5).reduce(15, Integer::sum);
 		System.out.print(reduce);
 	}

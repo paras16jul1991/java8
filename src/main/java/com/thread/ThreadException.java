@@ -14,8 +14,10 @@ class TestT implements Runnable {
 }
 
 public class ThreadException {
-	public static void main(String[] args) {
-		new Thread(new TestT()).start();
+	public static void main(String[] args) throws InterruptedException {
+		Thread thread = new Thread(new TestT());
+		thread.start();
+		thread.join();
 		System.out.println("Th");
 	}
 }
